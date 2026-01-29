@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 500px at 15% 25%, rgba(150, 80, 255, 0.18), transparent 50%),
+    radial-gradient(700px 400px at 85% 40%, rgba(255, 80, 180, 0.15), transparent 55%),
+    linear-gradient(180deg, #070112, #0b0320, #05000c);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* STAR TEXTURE (FIXED) */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.12), transparent 40%),
+    radial-gradient(1px 1px at 70% 75%, rgba(255,255,255,.08), transparent 40%);
+  opacity: 0.25;
+  pointer-events: none; /* 🔥 THIS FIXES HOVER */
+}
+
+/* SPLIT LAYOUT */
+.split-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.6fr auto 1.4fr;
+  align-items: center;
+  padding: 0 6vw;
+}
+
+/* BRAND */
+.brand-section {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 650px;
+}
+
+/* DIVIDER */
+.divider {
+  width: 1px;
+  height: 70vh;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+}
+
+/* AUTH AREA */
+.canvas {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 12vw;
+}
+
+.auth-card {
+  width: 360px;
+}
+
+.auth-card > * {
+  margin-bottom: 14px;
+}
+
+/* INPUTS */
+.field input {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  background: rgba(8, 0, 25, 0.65);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: #fff;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: rgba(170,120,255,0.7);
+  box-shadow: 0 0 0 2px rgba(170,120,255,0.15);
+}
+
+/* CHECKBOX */
+.meta {
+  font-size: 12px;
+}
+
+.meta label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.meta input[type="checkbox"] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(170, 120, 255, 0.6);
+  cursor: pointer;
+  position: relative;
+}
+
+.meta input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, #9f5cff, #6d3cff);
+}
+
+.meta input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  width: 4px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* BUTTON (GLOWS NOW ✅) */
+.neon-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #9f5cff, #6d3cff);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.neon-btn:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 2px rgba(159, 92, 255, 0.25),
+    0 8px 22px rgba(120, 60, 255, 0.45);
+}
+
+/* LINKS (GLOW WORKS NOW ✅) */
+.switch {
+  text-align: center;
+  font-size: 13px;
+}
+
+.switch a,
+.meta a {
+  color: #d7c5ff;
+  text-decoration: none;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.switch a:hover,
+.meta a:hover {
+  color: #f2ecff;
+  text-shadow: 0 0 14px rgba(170, 120, 255, 0.75);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  font-size: 11px;
+  opacity: 0.6;
+  margin-top: 26px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .split-container {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .divider,
+  .brand-section {
+    display: none;
+  }
+
+  .canvas {
+    padding-left: 0;
+    justify-content: center;
+  }
+}
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 44px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 14px;                 /* inside the input */
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.65;
+  user-select: none;
+  line-height: 1;
+}
+
+.toggle-password:hover {
+  opacity: 1;
+}
+/* ===============================
+   TERMS & PRIVACY LINKS
+================================ */
+
+.legal-link {
+  color: #c9b6ff;                 /* softer purple */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.legal-link:hover {
+  color: #f2ecff;
+  text-shadow: 0 0 12px rgba(170, 120, 255, 0.75);
+}
+.meta {
+  margin-top: -6px;   /* ⬆ lifts the checkbox row up */
+}
+.auth-card .meta {
+  margin-top: -10px;
+}
+

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(900px 500px at 20% 20%, rgba(150,80,255,.18), transparent 50%),
+    radial-gradient(700px 400px at 80% 40%, rgba(255,80,180,.15), transparent 55%),
+    linear-gradient(180deg, #070112, #0b0320, #05000c);
+  color: #fff;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,.1), rgba(255,255,255,.02));
+  border-right: 1px solid rgba(255,255,255,.12);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  opacity: .8;
+  cursor: pointer;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: rgba(159,92,255,.25);
+  opacity: 1;
+}
+
+/* CONTENT */
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+header p {
+  opacity: .7;
+  margin-top: 6px;
+}
+
+/* CARDS */
+.card {
+  margin-top: 30px;
+  padding: 26px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,.1), rgba(255,255,255,.03));
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.card h2 {
+  margin-bottom: 16px;
+}
+
+/* TRACKS */
+.tracks {
+  display: flex;
+  gap: 12px;
+}
+
+.track {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.08);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.track.active {
+  background: linear-gradient(135deg, #9f5cff, #6d3cff);
+}
+
+/* LISTS */
+ul {
+  padding-left: 18px;
+}
+
+ul li {
+  margin-bottom: 6px;
+  opacity: .85;
+}
+
+/* PLANS */
+.plans {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+ol {
+  padding-left: 18px;
+}
+
+.resources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.resources a {
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.08);
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.resources a:hover {
+  box-shadow: 0 0 18px rgba(159,92,255,.5);
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Post Hackathon | HackHub Organizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="post-hackathon.css" />
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="logo">HackHub</h2>
+    <nav>
+  <a href="organizer .html">Dashboard</a>
+  <a class="active">Post Hackathon</a>
+  <a>Registrations</a>
+  <a>Submissions</a>
+  <a>Announcements</a>   <!-- ✅ ADDED -->
+  <a>Winners</a>
+  <a>Analytics</a>
+  <a>Insights</a>        <!-- ✅ ADDED -->
+  
+</nav>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="header">
+      <h1>Create a New Hackathon</h1>
+      <p>Define rules, scope, judging & guidance</p>
+    </header>
+
+    <form id="hackathonForm">
+
+      <!-- BASIC INFO -->
+      <section class="card">
+        <h3>1. Basic Information</h3>
+
+        <input type="text" id="title" placeholder="Hackathon Title *" required>
+        <input type="text" id="organizer" placeholder="Organizer Name *" required>
+
+        <div class="row">
+          <select id="mode">
+            <option>Online</option>
+            <option>Offline</option>
+            <option>Hybrid</option>
+          </select>
+
+          <select id="level">
+            <option>College</option>
+            <option>National</option>
+            <option>International</option>
+          </select>
+        </div>
+
+        <textarea id="description" placeholder="Hackathon Description *"></textarea>
+      </section>
+
+      <!-- DATES -->
+      <section class="card">
+        <h3>2. Schedule</h3>
+
+        <div class="row">
+          <label>
+            Start Date
+            <input type="date" id="startDate">
+          </label>
+
+          <label>
+            End Date
+            <input type="date" id="endDate">
+          </label>
+        </div>
+
+        <select id="duration">
+          <option>24 Hours</option>
+          <option>36 Hours</option>
+          <option>48 Hours</option>
+          <option>1 Week</option>
+        </select>
+      </section>
+
+      <!-- THEMES -->
+      <section class="card">
+        <h3>3. Themes & Domains</h3>
+
+        <div class="checkbox-grid">
+          <label><input type="checkbox"> AI / ML</label>
+          <label><input type="checkbox"> Web</label>
+          <label><input type="checkbox"> Blockchain</label>
+          <label><input type="checkbox"> Cybersecurity</label>
+          <label><input type="checkbox"> FinTech</label>
+          <label><input type="checkbox"> HealthTech</label>
+          <label><input type="checkbox"> Climate / ESG</label>
+          <label><input type="checkbox"> Open Innovation</label>
+        </div>
+      </section>
+
+      <!-- RULES -->
+      <section class="card">
+        <h3>4. Rules & Constraints</h3>
+
+        <textarea placeholder="Team size, eligibility, restrictions"></textarea>
+
+        <label class="inline">
+          <input type="checkbox"> Allow pre-built code
+        </label>
+
+        <label class="inline">
+          <input type="checkbox"> Allow APIs & datasets
+        </label>
+      </section>
+
+      <!-- JUDGING -->
+      <section class="card">
+        <h3>5. Judging Criteria</h3>
+
+        <div class="criteria">
+          <label>Innovation <input type="number" value="30">%</label>
+          <label>Technical Complexity <input type="number" value="25">%</label>
+          <label>Impact <input type="number" value="25">%</label>
+          <label>Presentation <input type="number" value="20">%</label>
+        </div>
+      </section>
+
+      <!-- SUBMISSION -->
+      <section class="card">
+        <h3>6. Submission Requirements</h3>
+
+        <label><input type="checkbox"> GitHub Repository</label>
+        <label><input type="checkbox"> Live Demo</label>
+        <label><input type="checkbox"> Pitch Deck</label>
+        <label><input type="checkbox"> README</label>
+      </section>
+
+      <!-- PRIZES -->
+      <section class="card">
+        <h3>7. Prizes</h3>
+
+        <input type="text" placeholder="1st Prize">
+        <input type="text" placeholder="2nd Prize">
+        <input type="text" placeholder="3rd Prize">
+      </section>
+
+      <!-- ACTIONS -->
+      <div class="actions">
+        <button type="button" id="previewBtn">Preview</button>
+        <button type="submit" class="neon-btn">Publish Hackathon</button>
+      </div>
+
+    </form>
+
+  </main>
+</div>
+
+<script src="post-hackathon.js"></script>
+</body>
+</html>

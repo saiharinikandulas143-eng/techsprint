@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HackHub | Project Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="showcase.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">TechSprint</div>
+  <div class="nav-right">
+    <span>My Portfolio</span>
+    <button id="shareBtn">Share</button>
+  </div>
+</nav>
+
+<main class="container">
+
+  <!-- PROFILE HEADER -->
+  <section class="profile-card">
+    <h1>👋 Hi, I'm Sai</h1>\
+    <p>Hackathon Enthusiast • Full-Stack Developer</p>
+
+    <div class="profile-stats">
+      <div><strong>5</strong><span>Hackathons</span></div>
+      <div><strong>4</strong><span>Projects</span></div>
+      <div><strong>3</strong><span>Badges</span></div>
+    </div>
+  </section>
+
+  <!-- FILTER -->
+  <section class="filter-bar">
+    <select id="techFilter">
+      <option value="all">All Tech</option>
+      <option value="AI">AI</option>
+      <option value="Web">Web</option>
+      <option value="Blockchain">Blockchain</option>
+    </select>
+
+    <label class="toggle">
+      <input type="checkbox" id="recruiterView">
+      <span>Recruiter View</span>
+    </label>
+  </section>
+
+  <!-- PROJECT LIST -->
+  <section id="projects" class="projects"></section>
+
+</main>
+
+<script src="showcase.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HackHub | Strategy & Learning Hub</title>
+  <link rel="stylesheet" href="strategy.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">HackHub</div>
+    <nav>
+      <a>🏁 Readiness</a>
+      <a>🔍 Discover</a>
+      <a>💡 Idea Generator</a>
+      <a class="active">🧠 Strategy Hub</a>
+      <a>👥 Teams</a>
+      <a>📊 Dashboard</a>
+      <a>📂 Projects</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="content">
+
+    <header>
+      <h1>Strategy & Learning Hub</h1>
+      <p>Actionable guidance to help you win hackathons, not just attend them</p>
+    </header>
+
+    <!-- TRACK SELECT -->
+    <section class="card">
+      <h2>Select Your Level</h2>
+      <div class="tracks">
+        <button class="track active" data-level="beginner">Beginner</button>
+        <button class="track" data-level="intermediate">Intermediate</button>
+        <button class="track" data-level="advanced">Advanced</button>
+      </div>
+      <p id="trackDescription"></p>
+    </section>
+
+    <!-- HOW TO WIN -->
+    <section class="card">
+      <h2>How to Win This Level</h2>
+      <ul id="winGuide"></ul>
+    </section>
+
+    <!-- PREP PLANS -->
+    <section class="card">
+      <h2>Preparation Plans</h2>
+      <div class="plans">
+        <div>
+          <h3>7-Day Plan</h3>
+          <ol id="plan7"></ol>
+        </div>
+        <div>
+          <h3>14-Day Plan</h3>
+          <ol id="plan14"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRATEGY -->
+    <section class="card">
+      <h2>Strategy Playbook</h2>
+      <ul id="strategies"></ul>
+    </section>
+
+    <!-- COMMON MISTAKES -->
+    <section class="card">
+      <h2>Common Mistakes</h2>
+      <ul id="mistakes"></ul>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section class="card">
+      <h2>Final Submission Checklist</h2>
+      <ul class="checklist">
+        <li>✅ Working demo link</li>
+        <li>✅ Clear README</li>
+        <li>✅ Problem → Solution → Impact explained</li>
+        <li>✅ Pitch deck ready</li>
+        <li>✅ Tech stack justified</li>
+        <li>✅ Fallback demo video</li>
+      </ul>
+    </section>
+
+    <!-- RESOURCES -->
+    <section class="card">
+      <h2>Resources</h2>
+      <div class="resources">
+        <a href="https://www.canva.com/templates/search/pitch-deck/" target="_blank">📊 Winning Pitch Decks</a>
+        <a href="https://github.com/vercel/nextjs-boilerplate" target="_blank">⚙️ Starter Boilerplates</a>
+        <a href="https://www.figma.com/community/ui_kits" target="_blank">🎨 UI Kits</a>
+        <a href="https://rapidapi.com/hub" target="_blank">🔗 Public APIs</a>
+        <a href="https://www.kaggle.com/datasets" target="_blank">📁 Open Datasets</a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="strategy.js"></script>
+</body>
+</html>

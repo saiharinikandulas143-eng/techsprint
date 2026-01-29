@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TechSprint Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<div class="split-container">
+
+  <!-- LEFT SIDE : LOGO -->
+  <div class="brand-section">
+    <img src="assets/logo.png" alt="TechSprint Logo" class="brand-logo">
+    
+  </div>
+  <div class="divider"></div>
+
+  <!-- RIGHT SIDE : LOGIN -->
+  <div class="canvas">
+    <div class="auth-card">
+
+      <h2>Sign In</h2>
+
+      <div class="field">
+        <input type="email" placeholder="Email">
+      </div>
+
+      <div class="field password-field">
+  <input type="password" id="password" placeholder="Password">
+  <span class="toggle-password" id="togglePassword">👁️</span>
+</div>
+
+
+      <div class="meta">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="reset.html">Forgot password?</a>
+      </div>
+
+      <button class="neon-btn">Sign In</button>
+
+      <p class="switch">
+        Don’t have an account? <a href="signup.html">Sign Up</a>
+      </p>
+
+      <footer>
+        Privacy Policy · Terms of Service
+      </footer>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    /* ===============================
+       PASSWORD SHOW / HIDE (FIXED)
+    ================================ */
+    document.querySelectorAll(".password-field").forEach(field => {
+      const input = field.querySelector("input");
+      const toggle = field.querySelector(".toggle-password");
+
+      toggle.addEventListener("click", () => {
+        if (input.type === "password") {
+          input.type = "text";
+          toggle.textContent = "🙈";
+        } else {
+          input.type = "password";
+          toggle.textContent = "👁️";
+        }
+      });
+    });
+
+    /* ===============================
+       LOGIN VALIDATION (SAFE)
+    ================================ */
+    const loginBtn = document.querySelector(".neon-btn");
+    const emailInput = document.querySelector('input[type="email"]');
+    const passwordField = document.querySelector(".password-field input");
+
+    loginBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const email = emailInput.value.trim();
+      const password = passwordField.value;
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        emailInput.focus();
+        return;
+      }
+
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        passwordField.focus();
+        return;
+      }
+
+      const allowedUsers = [
+        { email: "admin@techsprint.com", password: "admin123" },
+        { email: "judge@techsprint.com", password: "judge456" }
+      ];
+
+      const isAuthorized = allowedUsers.some(
+        user => user.email === email && user.password === password
+      );
+
+      if (!isAuthorized) {
+        alert("This email or password is not authorized.");
+        return;
+      }
+
+      alert("Login successful!");
+      window.location.href = "home.html";
+    });
+
+  });
+</script>
+
+
+
+</body>
+</html>

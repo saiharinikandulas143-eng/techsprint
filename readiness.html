@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HackHub | Readiness Check</title>
+  <link rel="stylesheet" href="readiness.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">HackHub</div>
+
+    <nav>
+      <a class="active">🏁 Readiness Score</a>
+      <a> Discover Hackathons</a>
+      <a> Strategy & Learning</a>
+      <a> Hackathon Roadmap</a>
+      <a> Dashboard</a>
+      <a> Project Showcase</a>
+      <a> Past Winners</a>
+      <a Team & Networking</a>
+      <a>Submit Project</a>
+      <a> Announcements</a>
+      <a> Settings</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <header class="header">
+      <h1>Hackathon Readiness Check</h1>
+      <p>Measure how prepared you are for this hackathon</p>
+    </header>
+
+    <section class="readiness-container">
+
+      <!-- SCORE -->
+      <div class="score-card">
+        <div class="circle-wrap">
+          <svg width="220" height="220">
+            <circle cx="110" cy="110" r="100"/>
+            <circle cx="110" cy="110" r="100" id="progressCircle"/>
+          </svg>
+          <div class="score-text">
+            <span id="score">0</span>
+            <small>/ 100</small>
+          </div>
+        </div>
+
+        <h3>Overall Readiness</h3>
+        <p id="verdict">Calculating...</p>
+      </div>
+
+      <!-- FACTORS -->
+      <div class="factors-card">
+
+        <h2>Readiness Breakdown</h2>
+
+        <div class="factor">
+          <label>Skill Match</label>
+          <input type="range" min="0" max="100" value="75" data-weight="0.25">
+          <span>Frontend, backend, pitching</span>
+        </div>
+
+        <div class="factor">
+          <label>Time Availability</label>
+          <input type="range" min="0" max="100" value="80" data-weight="0.20">
+          <span>24–48 hour commitment</span>
+        </div>
+
+        <div class="factor">
+          <label>Idea Feasibility</label>
+          <input type="range" min="0" max="100" value="65" data-weight="0.20">
+          <span>Scope vs time</span>
+        </div>
+
+        <div class="factor">
+          <label>Team Strength</label>
+          <input type="range" min="0" max="100" value="70" data-weight="0.20">
+          <span>Roles & collaboration</span>
+        </div>
+
+        <div class="factor">
+          <label>Pitch Preparedness</label>
+          <input type="range" min="0" max="100" value="60" data-weight="0.15">
+          <span>Demo + storytelling</span>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="readiness.js"></script>
+</body>
+</html>

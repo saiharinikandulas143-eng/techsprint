@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(900px 500px at 20% 20%, rgba(150,80,255,.18), transparent 50%),
+    radial-gradient(700px 400px at 80% 40%, rgba(255,80,180,.15), transparent 55%),
+    linear-gradient(180deg,#070112,#0b0320,#05000c);
+  color: #fff;
+}
+
+/* APP LAYOUT */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  padding: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.10),
+    rgba(255,255,255,.02)
+  );
+  border-right: 1px solid rgba(255,255,255,.12);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px 14px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: background 0.25s, opacity 0.25s;
+}
+
+.sidebar nav a:hover {
+  background: rgba(159,92,255,.15);
+  opacity: 1;
+}
+
+.sidebar nav a.active {
+  background: rgba(159,92,255,.25);
+  opacity: 1;
+}
+
+/* CONTENT */
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+.header h1 {
+  font-size: 32px;
+}
+
+.header p {
+  opacity: 0.7;
+  margin-top: 6px;
+}
+
+/* READINESS */
+.readiness-container {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* CARDS */
+.score-card,
+.factors-card {
+  padding: 30px;
+  border-radius: 22px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.10),
+    rgba(255,255,255,.03)
+  );
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+/* SCORE */
+.circle-wrap {
+  position: relative;
+  width: 220px;
+  margin: auto;
+}
+
+svg circle {
+  fill: none;
+  stroke-width: 14;
+}
+
+svg circle:first-child {
+  stroke: rgba(255,255,255,.1);
+}
+
+#progressCircle {
+  stroke: #9f5cff;
+  stroke-dasharray: 628;
+  stroke-dashoffset: 628;
+  transition: stroke-dashoffset 0.8s ease;
+}
+
+.score-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-text span {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+/* FACTORS */
+.factor {
+  margin-bottom: 20px;
+}
+
+.factor label {
+  font-weight: 500;
+}
+
+.factor span {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.factor input {
+  width: 100%;
+  margin: 6px 0;
+}

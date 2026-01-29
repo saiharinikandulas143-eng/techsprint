@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 500px at 15% 25%, rgba(150, 80, 255, 0.18), transparent 50%),
+    radial-gradient(700px 400px at 85% 40%, rgba(255, 80, 180, 0.15), transparent 55%),
+    linear-gradient(180deg, #070112, #0b0320, #05000c);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* STAR TEXTURE */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.12), transparent 40%),
+    radial-gradient(1px 1px at 70% 75%, rgba(255,255,255,.08), transparent 40%);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* CENTER WRAPPER */
+.center-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+/* CARD */
+.auth-card {
+  width: 360px;
+}
+
+/* TEXT */
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.helper-text {
+  font-size: 13px;
+  opacity: 0.75;
+  margin-bottom: 18px;
+  line-height: 1.4;
+}
+
+/* INPUT */
+.field input {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  background: rgba(8, 0, 25, 0.65);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.field input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.field input:focus {
+  outline: none;
+  border-color: rgba(170,120,255,0.7);
+  box-shadow: 0 0 0 2px rgba(170,120,255,0.15);
+}
+
+/* BUTTON */
+.neon-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #9f5cff, #6d3cff);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.neon-btn:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 2px rgba(159, 92, 255, 0.25),
+    0 8px 22px rgba(120, 60, 255, 0.45);
+}
+
+/* LINKS */
+.switch {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 18px;
+}
+
+.switch a {
+  color: #d7c5ff;
+  text-decoration: none;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.switch a:hover {
+  color: #f2ecff;
+  text-shadow: 0 0 14px rgba(170, 120, 255, 0.75);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  font-size: 11px;
+  opacity: 0.6;
+  margin-top: 26px;
+}

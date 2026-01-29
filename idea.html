@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HackHub | Idea Generator</title>
+  <link rel="stylesheet" href="idea.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">HackHub</div>
+    <nav>
+      <a>🏁 Readiness</a>
+      <a>🔍 Discover</a>
+      <a class="active">💡 Idea Generator</a>
+      <a>🧠 Strategy</a>
+      <a>👥 Teams</a>
+      <a>📊 Dashboard</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->                                                                           
+  <main class="content">
+
+    <header>
+      <h1>Hackathon Idea Evaluator</h1>
+      <p>Submit your idea and get instant AI-style feedback</p>
+    </header>
+
+    <!-- IDEA INPUT -->
+    <section class="card">
+      <h2>Describe Your Idea</h2>
+
+      <textarea id="ideaInput" placeholder="Describe the problem, solution, target users, and tech you plan to use..."></textarea>
+
+      <div class="form-row">
+        <select id="domain">
+          <option value="">Select Domain</option>
+          <option>AI / ML</option>
+          <option>Web</option>
+          <option>Blockchain</option>
+          <option>FinTech</option>
+          <option>HealthTech</option>
+          <option>EdTech</option>
+        </select>
+
+        <select id="duration">
+          <option value="">Hackathon Duration</option>
+          <option>24 Hours</option>
+          <option>36 Hours</option>
+          <option>48 Hours</option>
+        </select>
+      </div>
+
+      <button class="neon-btn" onclick="evaluateIdea()">Evaluate Idea</button>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="card hidden" id="resultCard">
+
+      <h2>AI Evaluation Result</h2>
+
+      <div class="score-circle">
+        <span id="score">0</span>
+        <small>/ 100</small>
+      </div>
+
+      <div class="results-grid">
+
+        <div class="result-box">
+          <h3>Strengths</h3>
+          <ul id="strengths"></ul>
+        </div>
+
+        <div class="result-box">
+          <h3>Weaknesses</h3>
+          <ul id="weaknesses"></ul>
+        </div>
+
+        <div class="result-box">
+          <h3>Improvements</h3>
+          <ul id="improvements"></ul>
+        </div>
+
+        <div class="result-box">
+          <h3>Suggested Features</h3>
+          <ul id="features"></ul>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="idea.js"></script>
+</body>
+</html>

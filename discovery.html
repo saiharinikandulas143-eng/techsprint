@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hackathon Discovery | HackHub</title>
+  <link rel="stylesheet" href="discovery.css">
+</head>
+<body>
+
+<div class="page">
+
+  <h1>Hackathon Discovery</h1>
+  <p class="subtitle">Find hackathons that match your goals, skills, and time.</p>
+
+  <!-- SEARCH -->
+  <input
+    id="searchInput"
+    class="search-bar"
+    type="text"
+    placeholder="Search by name, theme, or organizer..."
+  />
+
+  <!-- FILTERS -->
+  <div class="filters">
+    <select id="statusFilter">
+      <option value="">Status</option>
+      <option value="Upcoming">Upcoming</option>
+      <option value="Ongoing">Ongoing</option>
+      <option value="Past">Past</option>
+    </select>
+
+    <select id="modeFilter">
+      <option value="">Mode</option>
+      <option value="Online">Online</option>
+      <option value="Offline">Offline</option>
+    </select>
+
+    <select id="priceFilter">
+      <option value="">Free / Paid</option>
+      <option value="Free">Free</option>
+      <option value="Paid">Paid</option>
+    </select>
+
+    <select id="durationFilter">
+      <option value="">Duration</option>
+      <option value="24">24h</option>
+      <option value="36">36h</option>
+      <option value="48">48h</option>
+      <option value="72">Week-long</option>
+    </select>
+
+    <select id="levelFilter">
+      <option value="">Level</option>
+      <option value="College">College</option>
+      <option value="National">National</option>
+      <option value="International">International</option>
+    </select>
+
+    <select id="themeFilter">
+      <option value="">Theme</option>
+      <option value="AI">AI</option>
+      <option value="Web">Web</option>
+      <option value="Blockchain">Blockchain</option>
+      <option value="IoT">IoT</option>
+      <option value="Cybersecurity">Cybersecurity</option>
+      <option value="FinTech">FinTech</option>
+    </select>
+  </div>
+
+  <!-- LIST -->
+  <div id="hackathonList" class="hackathon-list"></div>
+
+</div>
+
+<script src="discovery.js"></script>
+</body>
+</html>

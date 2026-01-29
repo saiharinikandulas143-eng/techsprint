@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 500px at 15% 25%, rgba(150, 80, 255, 0.18), transparent 50%),
+    radial-gradient(700px 400px at 85% 40%, rgba(255, 80, 180, 0.15), transparent 55%),
+    linear-gradient(180deg, #070112, #0b0320, #05000c);
+  
+  color: #fff;
+  overflow: hidden;
+}
+
+/* very subtle star texture */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.12), transparent 40%),
+    radial-gradient(1px 1px at 70% 75%, rgba(255,255,255,.08), transparent 40%);
+  opacity: 0.25;
+}
+
+/* container */
+.canvas {
+  z-index: 2;
+}
+
+/* card */
+.auth-card {
+  width: 360px;
+  padding: 0;              /* remove card padding */
+  background: none;        /* remove glass */
+  border: none;            /* remove border */
+  border-radius: 0;        /* remove rounding */
+  box-shadow: none;        /* remove shadow */
+  backdrop-filter: none;   /* remove blur */
+}
+.auth-card > * {
+  margin-bottom: 14px;
+}
+
+
+/* typography */
+h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.75;
+  margin-bottom: 28px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+/* inputs */
+.field input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  background: rgba(8, 0, 25, 0.65);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: #fff;
+}
+
+.field input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.field input:focus {
+  outline: none;
+  border-color: rgba(170,120,255,0.7);
+  box-shadow: 0 0 0 2px rgba(170,120,255,0.15);
+}
+
+/* meta row */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.meta a {
+  color: #cdb6ff;
+  text-decoration: none;
+}
+
+/* button */
+.neon-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(
+    135deg,
+    #9f5cff,
+    #6d3cff
+  );
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.neon-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(120, 60, 255, 0.35);
+}
+
+/* switch text */
+.switch {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 18px;
+}
+
+.switch a {
+  color: #d7c5ff;
+  text-decoration: none;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  font-size: 11px;
+  opacity: 0.6;
+  margin-top: 26px;
+}
+/* Custom checkbox theme (Remember me) */
+.meta input[type="checkbox"] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(170, 120, 255, 0.6);
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+/* checked state */
+.meta input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, #9f5cff, #6d3cff);
+  border-color: #9f5cff;
+}
+
+/* check mark */
+.meta input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 4px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+/* Medium glow hover for links */
+.meta a,
+.switch a {
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.meta a:hover,
+.switch a:hover {
+  color: #e3d6ff;
+  text-shadow: 0 0 10px rgba(170, 120, 255, 0.65);
+}
+/* ===============================
+   SPLIT LAYOUT
+================================ */
+
+.split-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.6fr auto 1.4fr; /* 👈 LOGO MOVES LEFT */
+  align-items: center;
+  padding: 0 6vw;
+}
+
+
+
+/* ===============================
+   LEFT BRAND SECTION
+================================ */
+
+
+
+.brand-logo {
+  width: 140px;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 12px rgba(160, 120, 255, 0.45));
+}
+
+.brand-title {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.brand-tagline {
+  font-size: 15px;
+  opacity: 0.75;
+  max-width: 360px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .split-container {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .brand-section {
+    align-items: center;
+    text-align: center;
+  }
+}
+.brand-logo {
+  width: 650px;
+  margin-bottom: 25px;
+  filter: none;        /* removes glow */
+  box-shadow: none;    /* removes any shadow */
+  background: none;    /* ensures no bg */
+}
+.brand-title {
+  font-size: 52px;       /* bigger TechSprint text */
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.brand-tagline {
+  font-size: 17px;       /* clearer slogan */
+  opacity: 0.75;
+  max-width: 420px;
+}
+.divider {
+  width: 1px;
+  height: 70vh;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+}
+.brand-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  justify-self: start;     /* anchor to left of grid */
+}
+
+
+.canvas {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* Push login closer to the center (towards divider) */
+.canvas {
+  justify-content: flex-start;
+  padding-left: 12vw;   /* smaller value = closer to center */
+}
+
+/* ===============================
+   PASSWORD TOGGLE (EYE ICON)
+================================ */
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 44px; /* space for eye icon */
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-60%); /* ⬅ moves eye slightly UP */
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.65;
+  user-select: none;
+  line-height: 1;
+}
+
+
+.toggle-password:hover {
+  opacity: 1;
+}
+

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(900px 500px at 15% 25%, rgba(150,80,255,0.18), transparent),
+    radial-gradient(700px 400px at 85% 40%, rgba(255,80,180,0.15), transparent),
+    linear-gradient(180deg, #070112, #0b0320, #05000c);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.page {
+  padding: 40px 6vw;
+}
+
+.subtitle {
+  opacity: 0.75;
+  margin-bottom: 20px;
+}
+
+/* SEARCH */
+.search-bar {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(8,0,25,0.65);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.filters select {
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(8,0,25,0.65);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+/* LIST */
+.hackathon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.hackathon-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.hackathon-card h3 {
+  color: #cdb6ff;
+  margin-bottom: 6px;
+}
+
+.meta {
+  font-size: 13px;
+  opacity: 0.75;
+  margin-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(159,92,255,0.25);
+}
+
+/* ACTIONS */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg,#9f5cff,#6d3cff);
+  color: #fff;
+}
+
+.actions .save {
+  background: rgba(255,255,255,0.15);
+}

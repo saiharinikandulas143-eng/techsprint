@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hackathon Archive | HackHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="archive.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <h2>HackHub</h2>
+  <span class="tagline">Learn from winning hackathon projects</span>
+</header>
+
+<main class="archive-page">
+
+  <h1>Hackathon Archive & Winners</h1>
+  <p class="subtitle">
+    Analyze real winning projects to understand what judges reward.
+  </p>
+
+  <!-- SEARCH & FILTER -->
+  <div class="controls">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search by hackathon, tech, or domain..."
+    />
+
+    <select id="techFilter">
+      <option value="">Tech Stack</option>
+      <option value="React">React</option>
+      <option value="AI">AI</option>
+      <option value="Blockchain">Blockchain</option>
+      <option value="Python">Python</option>
+      <option value="Node">Node</option>
+    </select>
+
+    <select id="domainFilter">
+      <option value="">Domain</option>
+      <option value="HealthTech">HealthTech</option>
+      <option value="FinTech">FinTech</option>
+      <option value="EdTech">EdTech</option>
+      <option value="Web">Web</option>
+      <option value="Cybersecurity">Cybersecurity</option>
+    </select>
+  </div>
+
+  <!-- ARCHIVE LIST -->
+  <div id="archiveList" class="archive-grid"></div>
+
+</main>
+
+<script src="archive-data.js"></script>
+<script src="archive.js"></script>
+</body>
+</html>

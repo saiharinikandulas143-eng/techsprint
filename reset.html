@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reset Password | TechSprint</title>
+  <link rel="stylesheet" href="reset.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<div class="center-wrapper">
+
+  <div class="auth-card">
+
+    <h2>Reset Password</h2>
+
+    <p class="helper-text">
+      Enter your email address and we’ll send you a reset link.
+    </p>
+
+    <div class="field">
+      <input type="email" placeholder="Email address">
+    </div>
+
+    <button class="neon-btn" id="resetBtn">Send Reset Link</button>
+
+    <p class="switch">
+      Remembered your password? <a href="index.html">Sign In</a>
+    </p>
+
+    <footer>
+      Privacy Policy · Terms of Service
+    </footer>
+
+  </div>
+
+</div>
+
+<script>
+  document.getElementById("resetBtn").addEventListener("click", () => {
+    alert("Reset link sent (demo)");
+  });
+</script>
+
+</body>
+</html>
