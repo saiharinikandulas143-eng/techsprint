@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HackHub | Organizer Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="organizer.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">TechSprint</div>
+
+    <div class="profile-box">
+      <img src="assets/image.png" alt="profile" />
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <div class="logo">TechSprint</div>
+
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="discovery.html">Hackathon Discovery</a>
+      <a href="readiness.html">Readiness Check</a>
+      <a href="strategy.html">Strategy & Learning</a>
+      <a href="idea.html">Idea Evaluator</a>
+      <a href="showcase.html">Project Showcase</a>
+      <a href="team.html">Team & Networking</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a class="active">Organizer Tools</a>
+    </nav>
+  </aside>
+
+
+
+  <!-- ================= MAIN ================= -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1>Organizer Control Panel</h1>
+      <p class="subtitle">Manage your hackathon end-to-end</p>
+    </header>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat-card">
+        <h3>Registrations</h3>
+        <strong>324</strong>
+      </div>
+      <div class="stat-card">
+        <h3>Submissions</h3>
+        <strong>186</strong>
+      </div>
+      <div class="stat-card">
+        <h3>Shortlisted</h3>
+        <strong>24</strong>
+      </div>
+      <div class="stat-card">
+        <h3>Winners</h3>
+        <strong>3</strong>
+      </div>
+    </section>
+
+    <!-- PANELS -->
+    <section class="panel-grid">
+
+      <div class="panel">
+        <h3>Recent Registrations</h3>
+        <table>
+          <tr><th>Name</th><th>College</th><th>Team</th></tr>
+          <tr><td>Aarav</td><td>IIT Madras</td><td>Yes</td></tr>
+          <tr><td>Sai</td><td>VIT</td><td>No</td></tr>
+          <tr><td>Riya</td><td>NIT Trichy</td><td>Yes</td></tr>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Project Submissions</h3>
+        <ul class="submission-list">
+          <li><strong>HackHub</strong><span>✔ Demo</span><span>✔ GitHub</span></li>
+          <li><strong>GreenTrack</strong><span>✔ Demo</span><span>✖ README</span></li>
+          <li><strong>ChainVote</strong><span>✔ Demo</span><span>✔ GitHub</span></li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h3>Send Announcement</h3>
+        <textarea placeholder="Message to participants..."></textarea>
+        <button class="neon-btn">Send</button>
+      </div>
+
+      <div class="panel">
+        <h3>Publish Winners</h3>
+        <select>
+          <option>1st Place</option>
+          <option>2nd Place</option>
+          <option>3rd Place</option>
+        </select>
+        <input placeholder="Team / Project Name" />
+        <button class="neon-btn">Publish</button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="organizer.js"></script>
+</body>
+</html>

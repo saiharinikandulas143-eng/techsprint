@@ -1,154 +1,235 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
 }
 
-body {
+
+
+/* ================= BACKGROUND ================= */
+
+body{
+  color:#fff;
+  min-height:100vh;
+
   background:
-    radial-gradient(900px 500px at 20% 20%, rgba(150,80,255,.18), transparent 50%),
-    radial-gradient(700px 400px at 80% 40%, rgba(255,80,180,.15), transparent 55%),
+    radial-gradient(circle at 15% 20%, rgba(160,70,255,.35), transparent 40%),
+    radial-gradient(circle at 85% 10%, rgba(255,70,180,.30), transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(120,0,255,.25), transparent 55%),
     linear-gradient(180deg,#070112,#0b0320,#05000c);
-  color: #fff;
 }
 
-.app {
-  display: flex;
-  min-height: 100vh;
+
+
+/* ================= TOPBAR ================= */
+
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+
+  height:70px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 40px;
+
+  backdrop-filter:blur(22px);
+  background:rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.08);
+
+  z-index:100;
 }
 
-/* SIDEBAR */
-.sidebar {
-  width: 260px;
-  padding: 24px;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,.10),
-    rgba(255,255,255,.02)
-  );
-  border-right: 1px solid rgba(255,255,255,.12);
+.brand{
+  font-size:24px;
+  font-weight:700;
+
+  background:linear-gradient(90deg,#ff7bd5,#b18cff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 30px;
+.top-actions{
+  display:flex;
+  align-items:center;
+  gap:16px;
 }
 
-.sidebar nav a {
-  display: block;
-  padding: 12px 14px;
-  margin-bottom: 6px;
-  border-radius: 10px;
-  cursor: pointer;
-  opacity: .8;
+.avatar{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:2px solid rgba(255,120,220,.6);
 }
 
-.sidebar nav a:hover,
-.sidebar nav a.active {
-  background: rgba(159,92,255,.25);
-  opacity: 1;
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+  position:fixed;
+  top:70px;
+  left:0;
+
+  width:260px;
+  height:calc(100vh - 70px);
+
+  padding:30px 20px;
+
+  backdrop-filter:blur(25px);
+  background:rgba(255,255,255,.04);
+  border-right:1px solid rgba(255,255,255,.08);
 }
 
-/* CONTENT */
-.content {
-  flex: 1;
-  padding: 40px;
+.logo{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:30px;
+
+  background:linear-gradient(90deg,#ff7bd5,#b18cff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.header h1 {
-  font-size: 32px;
+.sidebar nav{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
 }
 
-.header p {
-  opacity: .7;
-  margin-top: 6px;
+.sidebar nav a{
+  padding:12px 14px;
+  border-radius:14px;
+  text-decoration:none;
+  color:#cfc0ff;
+  transition:.25s;
 }
 
-/* CARDS */
-.card {
-  margin-top: 30px;
-  padding: 26px;
-  border-radius: 22px;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,.10),
-    rgba(255,255,255,.03)
-  );
-  border: 1px solid rgba(255,255,255,.12);
+.sidebar nav a:hover{
+  background:rgba(255,255,255,.08);
+  transform:translateX(5px);
 }
 
-.card h2 {
-  margin-bottom: 16px;
+.sidebar nav a.active{
+  background:linear-gradient(90deg,rgba(255,120,220,.3),rgba(150,80,255,.25));
 }
 
-/* PROFILE */
-.profile-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 16px;
+
+
+/* ================= MAIN ================= */
+
+.main{
+  margin-left:260px;
+  margin-top:90px;
+  padding:50px 70px;
 }
 
-.profile-grid input,
-.profile-grid select {
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  background: rgba(8,0,25,.65);
-  border: 1px solid rgba(255,255,255,.14);
-  color: #fff;
+
+
+/* ================= HEADER ================= */
+
+.page-header{
+  margin-bottom:40px;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
-  gap: 16px;
+.page-header h1{
+  font-size:32px;
+
+  background:linear-gradient(90deg,#ff7bd5,#b18cff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.card-box {
-  padding: 18px;
-  border-radius: 14px;
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.12);
+.page-header p{
+  opacity:.7;
 }
 
-.card-box button {
-  margin-top: 10px;
+
+
+/* ================= CARDS ================= */
+
+.card{
+  padding:26px;
+  margin-bottom:28px;
+
+  border-radius:22px;
+
+  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+
+  transition:.3s;
 }
 
-/* BUTTON */
-.neon-btn {
-  margin-top: 12px;
-  padding: 12px;
-  width: 100%;
-  border-radius: 12px;
-  border: none;
-  background: linear-gradient(135deg,#9f5cff,#6d3cff);
-  color: #fff;
-  cursor: pointer;
+.card:hover{
+  transform:translateY(-6px);
 }
 
-.neon-btn:hover {
-  box-shadow: 0 0 18px rgba(159,92,255,.5);
+
+
+/* ================= INPUTS ================= */
+
+.profile-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
 }
 
-/* HISTORY */
-.history li {
-  margin-bottom: 10px;
-  opacity: .8;
+input, select, textarea{
+  width:100%;
+  padding:12px;
+
+  border-radius:12px;
+
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+  color:#fff;
 }
 
-/* TEXTAREA */
-textarea {
-  width: 100%;
-  height: 80px;
-  padding: 12px;
-  border-radius: 10px;
-  background: rgba(8,0,25,.65);
-  border: 1px solid rgba(255,255,255,.14);
-  color: #fff;
+
+
+/* ================= GRID ================= */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+
+
+
+/* ================= BUTTON ================= */
+
+.neon-btn{
+  margin-top:14px;
+  padding:12px 20px;
+
+  border:none;
+  border-radius:14px;
+
+  background:linear-gradient(90deg,#ff7bd5,#b18cff);
+  color:#fff;
+
+  cursor:pointer;
+  font-weight:600;
+}
+
+.neon-btn:hover{
+  box-shadow:0 0 22px rgba(255,120,220,.5);
+}
+
+
+
+/* ================= HISTORY ================= */
+
+.history li{
+  margin-bottom:8px;
+  opacity:.85;
 }

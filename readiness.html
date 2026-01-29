@@ -2,50 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>HackHub | Readiness Check</title>
+  <title>Readiness Check | TechSprint</title>
   <link rel="stylesheet" href="readiness.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
+
 <body>
 
-<div class="app">
+  <!-- ================= TOP BAR ================= -->
+  <header class="topbar">
+    <div class="brand">TechSprint</div>
 
-  <!-- SIDEBAR -->
+    <div class="profile-box">
+      <img src="assets/image.png" alt="profile"/>
+    </div>
+  </header>
+
+
+  <!-- ================= SIDEBAR ================= -->
   <aside class="sidebar">
-    <div class="logo">HackHub</div>
+
+    <div class="logo">TechSprint</div>
 
     <nav>
-      <a class="active">🏁 Readiness Score</a>
-      <a> Discover Hackathons</a>
-      <a> Strategy & Learning</a>
-      <a> Hackathon Roadmap</a>
-      <a> Dashboard</a>
-      <a> Project Showcase</a>
-      <a> Past Winners</a>
-      <a Team & Networking</a>
-      <a>Submit Project</a>
-      <a> Announcements</a>
-      <a> Settings</a>
+      <a href="home.html">Home</a>
+      <a href="discovery.html">Hackathon Discovery</a>
+      <a class="active">Readiness Check</a>
+      <a href="strategy.html">Strategy & Learning</a>
+      <a href="idea.html">Idea Evaluator</a>
+      <a href="showcase.html">Project Showcase</a>
+      <a href="team.html">Team & Networking</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="organizer.html">Organizer Tools</a>
     </nav>
+
   </aside>
 
-  <!-- MAIN CONTENT -->
-  <main class="content">
 
-    <header class="header">
+  <!-- ================= MAIN ================= -->
+  <main class="main">
+
+    <div class="page-header">
       <h1>Hackathon Readiness Check</h1>
-      <p>Measure how prepared you are for this hackathon</p>
-    </header>
+      <p>Measure how prepared you are before you compete</p>
+    </div>
+
 
     <section class="readiness-container">
 
-      <!-- SCORE -->
+      <!-- ================= SCORE CARD ================= -->
       <div class="score-card">
+
         <div class="circle-wrap">
           <svg width="220" height="220">
             <circle cx="110" cy="110" r="100"/>
             <circle cx="110" cy="110" r="100" id="progressCircle"/>
           </svg>
+
           <div class="score-text">
             <span id="score">0</span>
             <small>/ 100</small>
@@ -53,10 +66,12 @@
         </div>
 
         <h3>Overall Readiness</h3>
-        <p id="verdict">Calculating...</p>
+        <p id="verdict">Adjust sliders to calculate</p>
+
       </div>
 
-      <!-- FACTORS -->
+
+      <!-- ================= FACTORS CARD ================= -->
       <div class="factors-card">
 
         <h2>Readiness Breakdown</h2>
@@ -97,8 +112,7 @@
 
   </main>
 
-</div>
+  <script src="readiness.js"></script>
 
-<script src="readiness.js"></script>
 </body>
 </html>

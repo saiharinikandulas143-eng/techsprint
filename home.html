@@ -3,24 +3,31 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>HackHub | Home</title>
+  <title>TechSprint | Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
 
+  <!-- ================= TOP HEADER ================= -->
+  <header class="topbar">
+    <div class="brand">TECHSPRINT</div>
+    <div class="profile-wrapper">
+      <img id="profilePic" alt="Profile" src="assets/image.png">
+    </div>
+  </header>
+
   <!-- ================= SIDEBAR ================= -->
   <aside class="sidebar">
-    <div class="logo">HackHub</div>
+    <div class="logo">TechSprint</div>
 
     <nav>
       <a class="active">Home</a>
       <a href="discovery.html">Hackathon Discovery</a>
       <a href="readiness.html">Readiness Check</a>
       <a href="strategy.html">Strategy & Learning</a>
-      <a href="roadmap.html">Hackathon Roadmap</a>
-      <a href="submission.html">Project Submission</a>
+      <a href="idea.html">Idea Evaluator</a>
       <a href="showcase.html">Project Showcase</a>
       <a href="team.html">Team & Networking</a>
       <a href="dashboard.html">Dashboard</a>
@@ -31,18 +38,20 @@
   <!-- ================= MAIN ================= -->
   <main class="main">
 
-    <!-- ========== HEADER ========== -->
+    <!-- HERO HEADER -->
     <header class="top-header">
       <h1>Don’t just join hackathons. <span>Win them.</span></h1>
       <p>Guidance before. Strategy during. Insights after.</p>
 
       <div class="header-actions">
-        <button class="neon-btn">Explore Hackathons</button>
-        <button class="ghost-btn">Start My First Hackathon</button>
+        <button class="neon-btn">
+          <a href="discovery.html">Explore Hackathons</a>
+        </button>
+        <button class="ghost-btn"><a href="post-hackathon.html">My First Hackathon</a></button>
       </div>
     </header>
 
-    <!-- ========== QUICK STATS ========== -->
+    <!-- QUICK STATS -->
     <section class="stats">
       <div class="stat">Upcoming Hackathons <strong>8</strong></div>
       <div class="stat">Saved Events <strong>4</strong></div>
@@ -50,7 +59,7 @@
       <div class="stat">Projects Submitted <strong>6</strong></div>
     </section>
 
-    <!-- ========== FEATURE GRID ========== -->
+    <!-- FEATURES -->
     <section class="feature-grid">
 
       <div class="feature-card">
@@ -58,68 +67,18 @@
         <ul>
           <li>Upcoming, ongoing & past hackathons</li>
           <li>Free / Paid, Online / Offline filters</li>
-          <li>Theme-based discovery (AI, Web, Blockchain)</li>
-          <li>Bookmark & deadline reminders</li>
+          <li>Theme-based discovery</li>
+          <li>Bookmark & reminders</li>
         </ul>
       </div>
 
       <div class="feature-card">
         <h3>🧠 Hackathon Readiness Check</h3>
         <ul>
-          <li>Skill vs hackathon fit score</li>
-          <li>Idea feasibility analysis</li>
+          <li>Skill vs hackathon fit</li>
+          <li>Idea feasibility</li>
           <li>Time & scope evaluation</li>
-          <li>Pitch difficulty estimate</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <h3>🗺 Strategy-Guided Roadmap</h3>
-        <ul>
-          <li>24 / 36 / 48 hour plans</li>
-          <li>Idea locking checkpoints</li>
-          <li>Demo-first development flow</li>
-          <li>Final pitch preparation timing</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <h3>📤 Submission Quality Gates</h3>
-        <ul>
-          <li>Demo & GitHub verification</li>
-          <li>README & clarity checks</li>
-          <li>Pitch deck completeness</li>
-          <li>Judge-ready validation</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <h3>🏆 Hackathon Archive</h3>
-        <ul>
-          <li>Past winners & rankings</li>
-          <li>Why projects won</li>
-          <li>Tech stacks & demos</li>
-          <li>Judge feedback insights</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <h3>📊 Project Showcase</h3>
-        <ul>
-          <li>Public portfolio</li>
-          <li>Recruiter view</li>
-          <li>GitHub + demo links</li>
-          <li>Skill & impact tags</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <h3>👥 Team & Networking</h3>
-        <ul>
-          <li>Find teammates by skill</li>
-          <li>Role-based matching</li>
-          <li>Mentor connections</li>
-          <li>Past teammate history</li>
+          <li>Pitch difficulty</li>
         </ul>
       </div>
 
@@ -135,9 +94,13 @@
 
     </section>
 
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2026 HackHub · Built for Hackers</p>
+    </footer>
+
   </main>
 
   <script src="home.js"></script>
-
 </body>
 </html>

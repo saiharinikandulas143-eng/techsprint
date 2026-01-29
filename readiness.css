@@ -1,152 +1,229 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
 }
 
-body {
+body{
+  display:flex;
+  min-height:100vh;
+  color:#fff;
+
   background:
-    radial-gradient(900px 500px at 20% 20%, rgba(150,80,255,.18), transparent 50%),
-    radial-gradient(700px 400px at 80% 40%, rgba(255,80,180,.15), transparent 55%),
+    radial-gradient(circle at 15% 20%, rgba(160,70,255,.35), transparent 40%),
+    radial-gradient(circle at 85% 10%, rgba(255,70,180,.30), transparent 45%),
     linear-gradient(180deg,#070112,#0b0320,#05000c);
-  color: #fff;
 }
 
-/* APP LAYOUT */
-.app {
-  display: flex;
-  min-height: 100vh;
+
+/* ================= TOP BAR ================= */
+
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:72px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 40px;
+
+  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,255,255,.1);
 }
 
-/* SIDEBAR */
-.sidebar {
-  width: 260px;
-  padding: 24px;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,.10),
-    rgba(255,255,255,.02)
+.brand{
+  font-size:24px;
+  font-weight:700;
+  background:linear-gradient(90deg,#ff7bd5,#b18cff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.profile-box img{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+  position:fixed;
+  top:72px;
+  left:0;
+
+  width:250px;
+  height:calc(100vh - 72px);
+
+  padding:32px 22px;
+
+  backdrop-filter:blur(25px);
+  background:rgba(255,255,255,.04);
+
+  border-right:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:30px;
+
+  background:linear-gradient(90deg,#ff7bd5,#b18cff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* nav */
+
+.sidebar nav{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.sidebar nav a{
+  padding:12px 16px;
+  border-radius:14px;
+  color:#cfc0ff;
+  font-size:14px;
+  text-decoration:none;
+
+  transition:.25s;
+}
+
+.sidebar nav a:hover{
+  background:rgba(255,255,255,.08);
+  transform:translateX(5px);
+}
+
+.sidebar nav a.active{
+  background:linear-gradient(
+    90deg,
+    rgba(255,120,220,.3),
+    rgba(150,80,255,.25)
   );
-  border-right: 1px solid rgba(255,255,255,.12);
+  box-shadow:0 0 16px rgba(255,120,220,.35);
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 30px;
+
+
+/* ================= MAIN ================= */
+
+.main{
+  flex:1;
+  margin-left:250px;
+  margin-top:90px;
+  padding:60px 80px;
 }
 
-.sidebar nav a {
-  display: block;
-  padding: 12px 14px;
-  margin-bottom: 6px;
-  border-radius: 10px;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: background 0.25s, opacity 0.25s;
+.page-header h1{
+  font-size:36px;
 }
 
-.sidebar nav a:hover {
-  background: rgba(159,92,255,.15);
-  opacity: 1;
+.page-header p{
+  opacity:.7;
+  margin-top:6px;
 }
 
-.sidebar nav a.active {
-  background: rgba(159,92,255,.25);
-  opacity: 1;
+
+/* ================= LAYOUT ================= */
+
+.readiness-container{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:380px 1fr;
+  gap:40px;
 }
 
-/* CONTENT */
-.content {
-  flex: 1;
-  padding: 40px;
-}
 
-.header h1 {
-  font-size: 32px;
-}
+/* ================= CARDS ================= */
 
-.header p {
-  opacity: 0.7;
-  margin-top: 6px;
-}
-
-/* READINESS */
-.readiness-container {
-  display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-/* CARDS */
 .score-card,
-.factors-card {
-  padding: 30px;
-  border-radius: 22px;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,.10),
-    rgba(255,255,255,.03)
-  );
-  border: 1px solid rgba(255,255,255,.12);
+.factors-card{
+  padding:28px;
+  border-radius:20px;
+
+  backdrop-filter:blur(18px);
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
 }
 
-/* SCORE */
-.circle-wrap {
-  position: relative;
-  width: 220px;
-  margin: auto;
+
+/* ================= SCORE ================= */
+
+.circle-wrap{
+  position:relative;
+  width:220px;
+  margin:auto;
 }
 
-svg circle {
-  fill: none;
-  stroke-width: 14;
+svg circle{
+  fill:none;
+  stroke-width:14;
 }
 
-svg circle:first-child {
-  stroke: rgba(255,255,255,.1);
+svg circle:first-child{
+  stroke:rgba(255,255,255,.1);
 }
 
-#progressCircle {
-  stroke: #9f5cff;
-  stroke-dasharray: 628;
-  stroke-dashoffset: 628;
-  transition: stroke-dashoffset 0.8s ease;
+#progressCircle{
+  stroke:url(#grad);
+  stroke:#b18cff;
+  stroke-dasharray:628;
+  stroke-dashoffset:628;
+  transition:stroke-dashoffset .6s ease;
 }
 
-.score-text {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.score-text{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
 }
 
-.score-text span {
-  font-size: 42px;
-  font-weight: 600;
+.score-text span{
+  font-size:44px;
+  font-weight:700;
 }
 
-/* FACTORS */
-.factor {
-  margin-bottom: 20px;
+
+/* ================= FACTORS ================= */
+
+.factor{
+  margin-bottom:22px;
 }
 
-.factor label {
-  font-weight: 500;
+.factor label{
+  font-weight:600;
 }
 
-.factor span {
-  font-size: 12px;
-  opacity: 0.6;
+.factor span{
+  font-size:12px;
+  opacity:.6;
 }
 
-.factor input {
-  width: 100%;
-  margin: 6px 0;
+.factor input{
+  width:100%;
+  margin:6px 0;
+  accent-color:#b18cff;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+  .sidebar{display:none;}
+  .main{margin-left:0;padding:30px;}
+  .readiness-container{grid-template-columns:1fr;}
 }

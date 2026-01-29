@@ -2,96 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>HackHub | Team Building</title>
-  <link rel="stylesheet" href="team.css" />
+  <title>TechSprint | Team & Networking</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="team.css" />
 </head>
+
 <body>
 
-<div class="app">
+<!-- ================= TOPBAR ================= -->
+<header class="topbar">
+  <div class="brand">TechSprint</div>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="logo">HackHub</div>
-    <nav>
-      <a href="home.html">Home</a>
-      <a href="discovery.html">Hackathon Discovery</a>
-      <a class="active">👥 Team & Networking</a>
-      <a href="dashboard.html">📊 Dashboard</a>
-      <a href="projects.html">📂 Projects</a>
-      <a href="winners.html">🏆 Winners</a>
-      <a href="settings.html">⚙️ Settings</a>
-    </nav>
-  </aside>
+  <div class="top-actions">
+    <span>Team Builder</span>
+    <img src="assets/image.png" class="avatar" />
+  </div>
+</header>
 
-  <!-- MAIN -->
-  <main class="content">
 
-    <header class="header">
-      <h1>Team Building & Networking</h1>
-      <p>Find teammates, mentors, and collaborators for your hackathon journey</p>
-    </header>
 
-    <!-- PROFILE -->
-    <section class="card profile-card">
-      <h2>Your Profile</h2>
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar">
+  <div class="logo">TechSprint</div>
 
-      <div class="profile-grid">
-        <div>
-          <label>Skills</label>
-          <input placeholder="Frontend, Backend, AI, Design">
-        </div>
-        <div>
-          <label>Tech Stack</label>
-          <input placeholder="React, Node, Python">
-        </div>
-        <div>
-          <label>Experience Level</label>
-          <select>
-            <option>Beginner</option>
-            <option>Intermediate</option>
-            <option>Advanced</option>
-          </select>
-        </div>
-      </div>
-    </section>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="discovery.html">Hackathon Discovery</a>
+    <a href="readiness.html">Readiness Check</a>
+    <a href="strategy.html">Strategy Hub</a>
+    <a href="idea.html">Idea Evaluator</a>
+    <a href="showcase.html">Project Showcase</a>
+    <a class="active">Team & Networking</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="organizer.html">Organizer Tools</a>
+  </nav>
+</aside>
 
-    <!-- MATCHING -->
-    <section class="card">
-      <h2>Recommended Teammates</h2>
 
-      <div class="grid" id="matchList"></div>
-    </section>
 
-    <!-- LOOKING FOR TEAM -->
-    <section class="card">
-      <h2>Looking for Team</h2>
+<!-- ================= MAIN ================= -->
+<main class="main">
 
-      <textarea placeholder="Describe your idea, skills needed, and hackathon goal..."></textarea>
-      <button class="neon-btn">Post Request</button>
-    </section>
+  <!-- HEADER -->
+  <section class="page-header">
+    <h1>👥 Team Building & Networking</h1>
+    <p>Find teammates, mentors, and collaborators for your hackathon journey</p>
+  </section>
 
-    <!-- MENTORS -->
-    <section class="card">
-      <h2>Mentor Connect</h2>
 
-      <div class="grid" id="mentorList"></div>
-    </section>
 
-    <!-- HISTORY -->
-    <section class="card">
-      <h2>Past Hackathon Teammates</h2>
+  <!-- PROFILE -->
+  <section class="card">
+    <h2>Your Profile</h2>
 
-      <ul class="history">
-        <li>🚀 AI Innovators Challenge — Team Alpha</li>
-        <li>🌱 GreenTech Hack — EcoCoders</li>
-        <li>💡 FinTech Sprint — StackMasters</li>
-      </ul>
-    </section>
+    <div class="profile-grid">
+      <input placeholder="Skills (Frontend, Backend, AI)" />
+      <input placeholder="Tech Stack (React, Node, Python)" />
+      <select>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+    </div>
+  </section>
 
-  </main>
 
-</div>
+
+  <!-- MATCHING -->
+  <section class="card">
+    <h2>Recommended Teammates</h2>
+    <div class="grid" id="matchList"></div>
+  </section>
+
+
+
+  <!-- POST REQUEST -->
+  <section class="card">
+    <h2>Looking for Team</h2>
+
+    <textarea placeholder="Describe your idea, skills needed, and hackathon goal..."></textarea>
+
+    <button class="neon-btn">Post Request</button>
+  </section>
+
+
+
+  <!-- MENTORS -->
+  <section class="card">
+    <h2>Mentor Connect</h2>
+    <div class="grid" id="mentorList"></div>
+  </section>
+
+
+
+  <!-- HISTORY -->
+  <section class="card">
+    <h2>Past Hackathon Teams</h2>
+
+    <ul class="history">
+      <li>🚀 AI Innovators Challenge — Team Alpha</li>
+      <li>🌱 GreenTech Hack — EcoCoders</li>
+      <li>💡 FinTech Sprint — StackMasters</li>
+    </ul>
+  </section>
+
+</main>
 
 <script src="team.js"></script>
 </body>

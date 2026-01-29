@@ -2,56 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Dashboard | HackHub</title>
+  <title>Dashboard | TechSprint</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="dashboard.css" />
 </head>
+
 <body>
 
-<header class="topbar">
-  <h2>HackHub Dashboard</h2>
-  <span class="tagline">Your hackathon command center</span>
-</header>
+  <!-- ================= TOP BAR ================= -->
+  <header class="topbar">
+    <div class="brand">TechSprint</div>
 
-<main class="dashboard">
+    <div class="profile-box">
+      <img src="assets/image.png" alt="profile" />
+    </div>
+  </header>
 
-  <!-- LEFT COLUMN -->
-  <section class="panel">
-    <h3>⏱ Live Countdown</h3>
-    <div id="timer" class="timer">--:--:--</div>
-  </section>
 
-  <section class="panel">
-    <h3>📌 Saved Hackathons</h3>
-    <ul id="savedHackathons"></ul>
-  </section>
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <div class="logo">TechSprint</div>
 
-  <!-- MIDDLE COLUMN -->
-  <section class="panel">
-    <h3>📝 Task Planner</h3>
-    <input id="taskInput" placeholder="Add task..." />
-    <button onclick="addTask()">Add</button>
-    <ul id="tasks"></ul>
-  </section>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="discovery.html">Hackathon Discovery</a>
+      <a href="readiness.html">Readiness Check</a>
+      <a href="strategy.html">Strategy & Learning</a>
+      <a href="roadmap.html">Hackathon Roadmap</a>
+      <a href="idea.html">Project Submission</a>
+      <a href="showcase.html">Project Showcase</a>
+      <a href="team.html">Team & Networking</a>
+      <a class="active">Dashboard</a>
+      <a href="organizer.html">Organizer Tools</a>
+    </nav>
+  </aside>
 
-  <section class="panel">
-    <h3>✅ To-Do Checklist</h3>
-    <ul id="checklist"></ul>
-  </section>
 
-  <!-- RIGHT COLUMN -->
-  <section class="panel">
-    <h3>📅 Deadlines</h3>
-    <ul id="deadlines"></ul>
-  </section>
+  <!-- ================= MAIN ================= -->
+  <main class="main">
 
-  <section class="panel">
-    <h3>🗒 Notes</h3>
-    <textarea id="notes" placeholder="Write quick notes..."></textarea>
-  </section>
+    <h1 class="page-title">Dashboard</h1>
+    <p class="subtitle">Your hackathon command center</p>
 
-</main>
+    <div class="dashboard">
 
-<script src="dashboard.js"></script>
+      <!-- LEFT COLUMN -->
+      <section class="panel">
+        <h3>⏱ Live Countdown</h3>
+        <div id="timer" class="timer">--:--:--</div>
+      </section>
+
+      <section class="panel">
+        <h3>📌 Saved Hackathons</h3>
+        <ul id="savedHackathons"></ul>
+      </section>
+
+      <!-- MIDDLE COLUMN -->
+      <section class="panel">
+        <h3>📝 Task Planner</h3>
+        <input id="taskInput" placeholder="Add task..." />
+        <button onclick="addTask()">Add</button>
+        <ul id="tasks"></ul>
+      </section>
+
+      <section class="panel">
+        <h3>✅ To-Do Checklist</h3>
+        <ul id="checklist"></ul>
+      </section>
+
+      <!-- RIGHT COLUMN -->
+      <section class="panel">
+        <h3>📅 Deadlines</h3>
+        <ul id="deadlines"></ul>
+      </section>
+
+      <section class="panel">
+        <h3>🗒 Notes</h3>
+        <textarea id="notes" placeholder="Write quick notes..."></textarea>
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="dashboard.js"></script>
+
 </body>
 </html>

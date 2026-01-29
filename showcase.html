@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HackHub | Project Showcase</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="showcase.css">
+  <meta charset="UTF-8" />
+  <title>TechSprint | Project Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="showcase.css" />
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="logo">TechSprint</div>
-  <div class="nav-right">
+<!-- ================= TOPBAR ================= -->
+<header class="topbar">
+  <div class="brand">TechSprint</div>
+
+  <div class="top-actions">
     <span>My Portfolio</span>
     <button id="shareBtn">Share</button>
+    <img src="assets/image.png"class="avatar" />
   </div>
-</nav>
+</header>
 
-<main class="container">
 
-  <!-- PROFILE HEADER -->
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar">
+  <div class="logo">TechSprint</div>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="discovery.html">Hackathon Discovery</a>
+    <a href="readiness.html">Readiness Check</a>
+    <a href="strategy.html">Strategy Hub</a>
+    <a href="idea.html">Idea Evaluator</a>
+    <a class="active">Project Showcase</a>
+    <a href="team.html">Team & Networking</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="organizer.html">Organizer Tools</a>
+  </nav>
+</aside>
+
+
+
+<!-- ================= MAIN ================= -->
+<main class="main">
+
+  <!-- PROFILE -->
   <section class="profile-card">
-    <h1>👋 Hi, I'm Sai</h1>\
+    <h1>👋 Hi, I'm Sai</h1>
     <p>Hackathon Enthusiast • Full-Stack Developer</p>
 
     <div class="profile-stats">
@@ -30,7 +56,9 @@
     </div>
   </section>
 
-  <!-- FILTER -->
+
+
+  <!-- FILTER BAR -->
   <section class="filter-bar">
     <select id="techFilter">
       <option value="all">All Tech</option>
@@ -40,15 +68,19 @@
     </select>
 
     <label class="toggle">
-      <input type="checkbox" id="recruiterView">
-      <span>Recruiter View</span>
+      <input type="checkbox" id="recruiterView" />
+      Recruiter View
     </label>
   </section>
 
-  <!-- PROJECT LIST -->
+
+
+  <!-- PROJECT GRID -->
   <section id="projects" class="projects"></section>
 
 </main>
+
+
 
 <script src="showcase.js"></script>
 </body>

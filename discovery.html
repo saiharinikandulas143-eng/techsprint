@@ -1,77 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hackathon Discovery | HackHub</title>
-  <link rel="stylesheet" href="discovery.css">
+  <meta charset="UTF-8" />
+  <title>Hackathon Discovery | TechSprint</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="discovery.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="page">
+  <!-- ================= TOP BAR ================= -->
+  <header class="topbar">
+    <div class="brand">TechSprint</div>
 
-  <h1>Hackathon Discovery</h1>
-  <p class="subtitle">Find hackathons that match your goals, skills, and time.</p>
+    <div class="profile-box">
+      <img src="assets/image.png" alt="Profile" />
+    </div>
+  </header>
 
-  <!-- SEARCH -->
-  <input
-    id="searchInput"
-    class="search-bar"
-    type="text"
-    placeholder="Search by name, theme, or organizer..."
-  />
 
-  <!-- FILTERS -->
-  <div class="filters">
-    <select id="statusFilter">
-      <option value="">Status</option>
-      <option value="Upcoming">Upcoming</option>
-      <option value="Ongoing">Ongoing</option>
-      <option value="Past">Past</option>
-    </select>
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <div class="logo">TechSprint</div>
 
-    <select id="modeFilter">
-      <option value="">Mode</option>
-      <option value="Online">Online</option>
-      <option value="Offline">Offline</option>
-    </select>
+    <nav>
+      <a href="home.html">Home</a>
+      <a class="active">Hackathon Discovery</a>
+      <a href="readiness.html">Readiness Check</a>
+      <a href="strategy.html">Strategy & Learning</a>
+      <a href="idea.html">Idea Evaluator</a>
+      <a href="showcase.html">Project Showcase</a>
+      <a href="team.html">Team & Networking</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="organizer.html">Organizer Tools</a>
+    </nav>
+  </aside>
 
-    <select id="priceFilter">
-      <option value="">Free / Paid</option>
-      <option value="Free">Free</option>
-      <option value="Paid">Paid</option>
-    </select>
 
-    <select id="durationFilter">
-      <option value="">Duration</option>
-      <option value="24">24h</option>
-      <option value="36">36h</option>
-      <option value="48">48h</option>
-      <option value="72">Week-long</option>
-    </select>
+  <!-- ================= MAIN ================= -->
+  <main class="main">
 
-    <select id="levelFilter">
-      <option value="">Level</option>
-      <option value="College">College</option>
-      <option value="National">National</option>
-      <option value="International">International</option>
-    </select>
+    <!-- PAGE HEADER -->
+    <h1 class="page-title">Hackathon Discovery</h1>
+    <p class="subtitle">
+      Find hackathons that match your goals, skills, and availability.
+    </p>
 
-    <select id="themeFilter">
-      <option value="">Theme</option>
-      <option value="AI">AI</option>
-      <option value="Web">Web</option>
-      <option value="Blockchain">Blockchain</option>
-      <option value="IoT">IoT</option>
-      <option value="Cybersecurity">Cybersecurity</option>
-      <option value="FinTech">FinTech</option>
-    </select>
-  </div>
+    <!-- SEARCH -->
+    <input
+      id="searchInput"
+      class="search-bar"
+      type="text"
+      placeholder="Search by name, theme, or organizer..."
+    />
 
-  <!-- LIST -->
-  <div id="hackathonList" class="hackathon-list"></div>
+    <!-- FILTERS -->
+    <div class="filters">
 
-</div>
+      <select id="statusFilter">
+        <option value="">Status</option>
+        <option value="Upcoming">Upcoming</option>
+        <option value="Ongoing">Ongoing</option>
+        <option value="Past">Past</option>
+      </select>
 
-<script src="discovery.js"></script>
+      <select id="modeFilter">
+        <option value="">Mode</option>
+        <option value="Online">Online</option>
+        <option value="Offline">Offline</option>
+      </select>
+
+      <select id="priceFilter">
+        <option value="">Free / Paid</option>
+        <option value="Free">Free</option>
+        <option value="Paid">Paid</option>
+      </select>
+
+      <select id="durationFilter">
+        <option value="">Duration</option>
+        <option value="24">24h</option>
+        <option value="36">36h</option>
+        <option value="48">48h</option>
+        <option value="72">72h</option>
+      </select>
+
+      <select id="levelFilter">
+        <option value="">Level</option>
+        <option value="College">College</option>
+        <option value="National">National</option>
+        <option value="International">International</option>
+      </select>
+
+      <select id="themeFilter">
+        <option value="">Theme</option>
+        <option value="AI">AI</option>
+        <option value="Web">Web</option>
+        <option value="Blockchain">Blockchain</option>
+        <option value="IoT">IoT</option>
+        <option value="Cybersecurity">Cybersecurity</option>
+        <option value="FinTech">FinTech</option>
+      </select>
+
+    </div>
+
+    <!-- HACKATHON LIST -->
+    <div id="hackathonList" class="hackathon-list"></div>
+
+  </main>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <!-- IMPORTANT: JS MUST be loaded at the END -->
+  <script src="discovery.js"></script>
+
 </body>
 </html>
